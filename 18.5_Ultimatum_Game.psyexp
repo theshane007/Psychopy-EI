@@ -26,13 +26,13 @@
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
-    <Param name="expName" updates="None" val="18_Prisoners_Dilemma" valType="str"/>
+    <Param name="expName" updates="None" val="18.5_Ultimatum_Game" valType="str"/>
     <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
     <Param name="logging level" updates="None" val="exp" valType="code"/>
   </Settings>
   <Routines>
-    <Routine name="PDInstructions">
-      <PolygonComponent name="PDIPoly">
+    <Routine name="UGInstructions">
+      <PolygonComponent name="UGIPoly">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="fillColor" updates="constant" val="black" valType="str"/>
@@ -42,7 +42,7 @@
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="4" valType="int"/>
-        <Param name="name" updates="None" val="PDIPoly" valType="code"/>
+        <Param name="name" updates="None" val="UGIPoly" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
@@ -57,7 +57,7 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
-      <TextComponent name="PDIText">
+      <TextComponent name="UGIText">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -66,7 +66,7 @@
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
-        <Param name="name" updates="None" val="PDIText" valType="code"/>
+        <Param name="name" updates="None" val="UGIText" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
@@ -81,14 +81,14 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="PDIKey">
+      <KeyboardComponent name="UGIKey">
         <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="PDIKey" valType="code"/>
+        <Param name="name" updates="None" val="UGIKey" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -100,7 +100,7 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="Blank500">
+    <Routine name="Black500">
       <PolygonComponent name="BlankPoly">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -127,8 +127,8 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
     </Routine>
-    <Routine name="PDTest">
-      <PolygonComponent name="PDPoly">
+    <Routine name="UGTest">
+      <PolygonComponent name="UGPoly">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="fillColor" updates="constant" val="black" valType="str"/>
@@ -138,176 +138,7 @@
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="4" valType="int"/>
-        <Param name="name" updates="None" val="PDPoly" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="shape" updates="constant" val="rectangle" valType="str"/>
-        <Param name="size" updates="constant" val="(2, 2)" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </PolygonComponent>
-      <TextComponent name="PDInstText">
-        <Param name="color" updates="constant" val="white" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
-        <Param name="name" updates="None" val="PDInstText" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0.4)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="You're playing against the computer:" valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
-      <PolygonComponent name="PDTopPoly">
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="red" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
-        <Param name="nVertices" updates="constant" val="10000" valType="int"/>
-        <Param name="name" updates="None" val="PDTopPoly" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
-        <Param name="size" updates="constant" val="(0.2, 0.2)" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </PolygonComponent>
-      <PolygonComponent name="PDDownPoly">
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="green" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
-        <Param name="nVertices" updates="constant" val="10000" valType="int"/>
-        <Param name="name" updates="None" val="PDDownPoly" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
-        <Param name="size" updates="constant" val="(0.2, 0.2)" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </PolygonComponent>
-      <PolygonComponent name="PDLeftPoly">
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="blue" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
-        <Param name="nVertices" updates="constant" val="10000" valType="int"/>
-        <Param name="name" updates="None" val="PDLeftPoly" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-0.2, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
-        <Param name="size" updates="constant" val="(0.2, 0.2)" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </PolygonComponent>
-      <PolygonComponent name="PDRightPoly">
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="yellow" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
-        <Param name="nVertices" updates="constant" val="10000" valType="int"/>
-        <Param name="name" updates="None" val="PDRightPoly" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0.2, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
-        <Param name="size" updates="constant" val="(0.2, 0.2)" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </PolygonComponent>
-      <KeyboardComponent name="PDKey">
-        <Param name="allowedKeys" updates="constant" val="'left', 'down', 'up', 'right'" valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="PDKey" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
-    </Routine>
-    <Routine name="PDTrial">
-      <PolygonComponent name="PDTPoly">
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="black" valType="str"/>
-        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
-        <Param name="nVertices" updates="constant" val="4" valType="int"/>
-        <Param name="name" updates="None" val="PDTPoly" valType="code"/>
+        <Param name="name" updates="None" val="UGPoly" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
@@ -322,7 +153,82 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
-      <TextComponent name="PDTDisplayText">
+      <TextComponent name="UGInstText">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="UGInstText" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.3)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="2" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="You're playing against the computer:" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="UGWinText">
+        <Param name="color" updates="constant" val="yellow" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Times New Roman" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="UGWinText" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="2" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$Winning_amt" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="UGTrial">
+      <PolygonComponent name="UGTPoly">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="black" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="UGTPoly" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="rectangle" valType="str"/>
+        <Param name="size" updates="constant" val="(2, 2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="2" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <TextComponent name="UGTDispText">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -331,7 +237,7 @@
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-        <Param name="name" updates="None" val="PDTDisplayText" valType="code"/>
+        <Param name="name" updates="None" val="UGTDispText" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0.3)" valType="code"/>
@@ -346,7 +252,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <TextComponent name="PDTLeftText">
+      <TextComponent name="UGTLeftText">
         <Param name="color" updates="constant" val="orange" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -355,7 +261,7 @@
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
-        <Param name="name" updates="None" val="PDTLeftText" valType="code"/>
+        <Param name="name" updates="None" val="UGTLeftText" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(-0.4, 0)" valType="code"/>
@@ -370,7 +276,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <TextComponent name="PDTRightText">
+      <TextComponent name="UGTRightText">
         <Param name="color" updates="constant" val="orange" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -379,7 +285,7 @@
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
-        <Param name="name" updates="None" val="PDTRightText" valType="code"/>
+        <Param name="name" updates="None" val="UGTRightText" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0.4, 0)" valType="code"/>
@@ -394,7 +300,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <PolygonComponent name="PDLPoly">
+      <PolygonComponent name="UGLPoly">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="fillColor" updates="constant" val="" valType="str"/>
@@ -404,7 +310,7 @@
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="4" valType="int"/>
-        <Param name="name" updates="None" val="PDLPoly" valType="code"/>
+        <Param name="name" updates="None" val="UGLPoly" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(-0.4, 0)" valType="code"/>
@@ -419,7 +325,7 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
-      <PolygonComponent name="PDRPoly">
+      <PolygonComponent name="UGRPoly">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="fillColor" updates="constant" val="" valType="str"/>
@@ -429,7 +335,7 @@
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="4" valType="int"/>
-        <Param name="name" updates="None" val="PDRPoly" valType="code"/>
+        <Param name="name" updates="None" val="UGRPoly" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0.4, 0)" valType="code"/>
@@ -445,8 +351,8 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
     </Routine>
-    <Routine name="PDChoice">
-      <PolygonComponent name="PDCPoly">
+    <Routine name="UGChoice">
+      <PolygonComponent name="UGCPoly">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="fillColor" updates="constant" val="black" valType="str"/>
@@ -456,7 +362,7 @@
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="4" valType="int"/>
-        <Param name="name" updates="None" val="PDCPoly" valType="code"/>
+        <Param name="name" updates="None" val="UGCPoly" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
@@ -471,7 +377,7 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
-      <TextComponent name="PDCWinText">
+      <TextComponent name="UGCWinText">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -480,7 +386,7 @@
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
-        <Param name="name" updates="None" val="PDCWinText" valType="code"/>
+        <Param name="name" updates="None" val="UGCWinText" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0.3)" valType="code"/>
@@ -495,7 +401,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <TextComponent name="PDChoiceText">
+      <TextComponent name="UGChoiceText">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -504,7 +410,7 @@
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
-        <Param name="name" updates="None" val="PDChoiceText" valType="code"/>
+        <Param name="name" updates="None" val="UGChoiceText" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0.1)" valType="code"/>
@@ -519,14 +425,14 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="PDCKey">
+      <KeyboardComponent name="UGCKey">
         <Param name="allowedKeys" updates="constant" val="'1', '2', '3'" valType="code"/>
         <Param name="correctAns" updates="constant" val="$corrAns" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="PDCKey" valType="code"/>
+        <Param name="name" updates="None" val="UGCKey" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -538,12 +444,12 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="PDWin">
-      <CodeComponent name="PDWCode">
+    <Routine name="UGWin">
+      <CodeComponent name="UGWCode">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="msg = &quot;&quot;;&amp;#10;keys = event.getKeys();&amp;#10;corr = PDCKey.corr;&amp;#10;if (keys) {&amp;#10;    if ((corr === 1)) {&amp;#10;        TextColor = &quot;green&quot;;&amp;#10;        msg = &quot;Yes! You both stole, thus you both win nothing! Thieves!&quot;;&amp;#10;    } else {&amp;#10;        if ((corr !== 1)) {&amp;#10;            TextColor = &quot;red&quot;;&amp;#10;            msg = &quot;No! You stole but computer did not steal, and hence you lose all the money! Idiot!&quot;;&amp;#10;        } else {&amp;#10;            if ((corr === 2)) {&amp;#10;                TextColor = &quot;green&quot;;&amp;#10;                msg = &quot;Yes! You both gave away, thus nobody wins anything! Cowards!&quot;;&amp;#10;            } else {&amp;#10;                if ((corr !== 2)) {&amp;#10;                    TextColor = &quot;red&quot;;&amp;#10;                    msg = &quot;No! You gave away your money but computer did not, so computer took away all your money! Generous loser!&quot;;&amp;#10;                } else {&amp;#10;                    if ((corr === 3)) {&amp;#10;                        TextColor = &quot;green&quot;;&amp;#10;                        msg = &quot;Yes! You both split, you both get half of the money!&quot;;&amp;#10;                    } else {&amp;#10;                        if ((corr !== 3)) {&amp;#10;                            TextColor = &quot;red&quot;;&amp;#10;                            msg = &quot;No! You split, but computer did not, but since you were generous, you get your share!&quot;;&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="msg=''&amp;#10;keys = event.getKeys()&amp;#10;corr = PDCKey.corr&amp;#10;&amp;#10;if keys:&amp;#10;    if corr==1:&amp;#10;        TextColor = 'green'&amp;#10;        msg = 'Yes! You both stole, thus you both win nothing! Thieves!'&amp;#10;    elif corr!=1:&amp;#10;        TextColor = 'red'&amp;#10;        msg = 'No! You stole but computer did not steal, and hence you lose all the money! Idiot!'&amp;#10;    elif corr==2:&amp;#10;        TextColor = 'green'&amp;#10;        msg = 'Yes! You both gave away, thus nobody wins anything! Cowards!'&amp;#10;    elif corr!=2:&amp;#10;        TextColor = 'red'&amp;#10;        msg = 'No! You gave away your money but computer did not, so computer took away all your money! Generous loser!'&amp;#10;    elif corr==3:&amp;#10;        TextColor = 'green'&amp;#10;        msg = 'Yes! You both split, you both get half of the money!'&amp;#10;    elif corr!=3:&amp;#10;        TextColor = 'red'&amp;#10;        msg = 'No! You split, but computer did not, but since you were generous, you get your share!'&amp;#10;     &amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="msg = &quot;&quot;;&amp;#10;keys = event.getKeys();&amp;#10;corr = UGCKey.corr;&amp;#10;if (keys) {&amp;#10;    if ((corr === 1)) {&amp;#10;        TextColor = &quot;green&quot;;&amp;#10;        msg = &quot;Yes! You both stole, thus you both win nothing! Thieves!&quot;;&amp;#10;    } else {&amp;#10;        if ((corr !== 1)) {&amp;#10;            TextColor = &quot;red&quot;;&amp;#10;            msg = &quot;No! You stole but computer did not steal, and hence you lose all the money! Idiot!&quot;;&amp;#10;        } else {&amp;#10;            if ((corr === 2)) {&amp;#10;                TextColor = &quot;green&quot;;&amp;#10;                msg = &quot;Yes! You both gave away, thus nobody wins anything! Cowards!&quot;;&amp;#10;            } else {&amp;#10;                if ((corr !== 2)) {&amp;#10;                    TextColor = &quot;red&quot;;&amp;#10;                    msg = &quot;No! You gave away your money but computer did not, so computer took away all your money! Generous loser!&quot;;&amp;#10;                } else {&amp;#10;                    if ((corr === 3)) {&amp;#10;                        TextColor = &quot;green&quot;;&amp;#10;                        msg = &quot;Yes! You both split, you both get half of the money!&quot;;&amp;#10;                    } else {&amp;#10;                        if ((corr !== 3)) {&amp;#10;                            TextColor = &quot;red&quot;;&amp;#10;                            msg = &quot;No! You split, but computer did not, but since you were generous, you get your share!&quot;;&amp;#10;                        }&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="msg=''&amp;#10;keys = event.getKeys()&amp;#10;corr = UGCKey.corr&amp;#10;&amp;#10;if keys:&amp;#10;    if corr==1:&amp;#10;        TextColor = 'green'&amp;#10;        msg = 'Yes! You both stole, thus you both win nothing! Thieves!'&amp;#10;    elif corr!=1:&amp;#10;        TextColor = 'red'&amp;#10;        msg = 'No! You stole but computer did not steal, and hence you lose all the money! Idiot!'&amp;#10;    elif corr==2:&amp;#10;        TextColor = 'green'&amp;#10;        msg = 'Yes! You both gave away, thus nobody wins anything! Cowards!'&amp;#10;    elif corr!=2:&amp;#10;        TextColor = 'red'&amp;#10;        msg = 'No! You gave away your money but computer did not, so computer took away all your money! Generous loser!'&amp;#10;    elif corr==3:&amp;#10;        TextColor = 'green'&amp;#10;        msg = 'Yes! You both split, you both get half of the money!'&amp;#10;    elif corr!=3:&amp;#10;        TextColor = 'red'&amp;#10;        msg = 'No! You split, but computer did not, but since you were generous, you get your share!'&amp;#10;     &amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -552,9 +458,9 @@
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="PDWCode" valType="code"/>
+        <Param name="name" updates="None" val="UGWCode" valType="code"/>
       </CodeComponent>
-      <PolygonComponent name="PDWPoly">
+      <PolygonComponent name="UGWPoly">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="fillColor" updates="constant" val="black" valType="str"/>
@@ -564,7 +470,7 @@
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="4" valType="int"/>
-        <Param name="name" updates="None" val="PDWPoly" valType="code"/>
+        <Param name="name" updates="None" val="UGWPoly" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
@@ -579,7 +485,7 @@
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
-      <TextComponent name="PDWText">
+      <TextComponent name="UGWText">
         <Param name="color" updates="set every repeat" val="$TextColor" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -588,7 +494,7 @@
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
-        <Param name="name" updates="None" val="PDWText" valType="code"/>
+        <Param name="name" updates="None" val="UGWText" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
@@ -606,27 +512,27 @@
     </Routine>
   </Routines>
   <Flow>
-    <Routine name="PDInstructions"/>
-    <Routine name="Blank500"/>
-    <LoopInitiator loopType="TrialHandler" name="PDLoop">
+    <Routine name="UGInstructions"/>
+    <Routine name="Black500"/>
+    <LoopInitiator loopType="TrialHandler" name="UGLoop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('FixedEntry', 'You won Rs. 50'), ('VariableEntry', 'Computer won Rs. 50'), ('TotalEntry', &quot;Together you've won Rs. 100&quot;), ('corrAns', 3)]), OrderedDict([('FixedEntry', 'You won Rs. 50'), ('VariableEntry', 'Computer won Rs. 40'), ('TotalEntry', &quot;Together you've won Rs. 90&quot;), ('corrAns', 2)]), OrderedDict([('FixedEntry', 'You won Rs. 40'), ('VariableEntry', 'Computer won Rs. 50'), ('TotalEntry', &quot;Together you've won Rs. 90&quot;), ('corrAns', 1)]), OrderedDict([('FixedEntry', 'You won Rs. 40'), ('VariableEntry', 'Computer won Rs. 40'), ('TotalEntry', &quot;Together you've won Rs. 80&quot;), ('corrAns', 3)]), OrderedDict([('FixedEntry', 'You won Rs. 100'), ('VariableEntry', 'Computer won Rs. 0'), ('TotalEntry', &quot;Together you've won Rs. 100&quot;), ('corrAns', 2)]), OrderedDict([('FixedEntry', 'You won Rs. 0'), ('VariableEntry', 'Computer won Rs. 100'), ('TotalEntry', &quot;Together you've won Rs. 100&quot;), ('corrAns', 1)])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="18_stimuli_prisoners_dilemma.xlsx" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('Winning_amt', 'You have Rs. 100 in the pot!'), ('FixedEntry', 'You won Rs. 50'), ('VariableEntry', 'Computer won Rs. 50'), ('TotalEntry', &quot;Together you've won Rs. 100&quot;), ('corrAns', 3)]), OrderedDict([('Winning_amt', 'You have Rs. 90 in the pot!'), ('FixedEntry', 'You won Rs. 50'), ('VariableEntry', 'Computer won Rs. 40'), ('TotalEntry', &quot;Together you've won Rs. 90&quot;), ('corrAns', 2)]), OrderedDict([('Winning_amt', 'You have Rs. 90 in the pot!'), ('FixedEntry', 'You won Rs. 40'), ('VariableEntry', 'Computer won Rs. 50'), ('TotalEntry', &quot;Together you've won Rs. 90&quot;), ('corrAns', 1)]), OrderedDict([('Winning_amt', 'You have Rs. 80 in the pot!'), ('FixedEntry', 'You won Rs. 40'), ('VariableEntry', 'Computer won Rs. 40'), ('TotalEntry', &quot;Together you've won Rs. 80&quot;), ('corrAns', 3)]), OrderedDict([('Winning_amt', 'You have Rs. 100 in the pot!'), ('FixedEntry', 'You won Rs. 100'), ('VariableEntry', 'Computer won Rs. 0'), ('TotalEntry', &quot;Together you've won Rs. 100&quot;), ('corrAns', 2)]), OrderedDict([('Winning_amt', 'You have Rs. 100 in the pot!'), ('FixedEntry', 'You won Rs. 0'), ('VariableEntry', 'Computer won Rs. 100'), ('TotalEntry', &quot;Together you've won Rs. 100&quot;), ('corrAns', 1)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="18.5_stimuli_ultimatum_game.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="code"/>
-      <Param name="name" updates="None" val="PDLoop" valType="code"/>
+      <Param name="name" updates="None" val="UGLoop" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
-    <Routine name="PDTest"/>
-    <Routine name="Blank500"/>
-    <Routine name="PDTrial"/>
-    <Routine name="Blank500"/>
-    <Routine name="PDChoice"/>
-    <Routine name="PDWin"/>
-    <Routine name="Blank500"/>
-    <LoopTerminator name="PDLoop"/>
-    <Routine name="Blank500"/>
+    <Routine name="UGTest"/>
+    <Routine name="Black500"/>
+    <Routine name="UGTrial"/>
+    <Routine name="Black500"/>
+    <Routine name="UGChoice"/>
+    <Routine name="UGWin"/>
+    <Routine name="Black500"/>
+    <LoopTerminator name="UGLoop"/>
+    <Routine name="Black500"/>
   </Flow>
 </PsychoPy2experiment>
